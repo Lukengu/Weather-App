@@ -1,0 +1,15 @@
+//
+//  config.xcconfig
+//  WeatherApp
+//
+//  Created by FGX on 2022/06/29.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+WEATHER_API_KEY = d7665c2e1a84b3b06cd17fe28d5ca3d2
+WEATHER_ENDPOINT = api.openweathermap.org/data/2.5/weather?lat=%@&lon=%@&appid=%@
+FORECAST5_ENDPOINT = api.openweathermap.org/data/2.5/forecast?lat=%@&lon=%@&appid=%@
+FQ_API_KEY = fsq3RPDC1U2bF0DKQNk4q7arNtasKtsht7eopCdJa6xWgfM=
+FQ_ENPOINT = api.foursquare.com/v3/places/search?ll=%@,%@
+
