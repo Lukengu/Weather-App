@@ -18,7 +18,6 @@ class ForecastInteractor: PresenterToInteractorForecastProtocol{
          let longitude = String(location.coordinate.longitude)
          let endpoint = "https://\(String(format:forecastEndpoint, latitude,longitude,apiKey))"
          let url = URL(string: endpoint)!
-         
          HttpRequestService.get(url: url, type: ForecastResponse.self, headers:["Content-type":"application/json"]) { [self] success, response, error in
              if success, let response = response as? ForecastResponse{
                  let parsedResponse = parse(response: response)
@@ -28,7 +27,6 @@ class ForecastInteractor: PresenterToInteractorForecastProtocol{
                  presenter?.failure(error: error!)
              }
            }
- 
          }
     }
     func getLocalForecasts() {
