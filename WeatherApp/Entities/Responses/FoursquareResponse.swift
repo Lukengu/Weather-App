@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 struct FoursquareResponse: Decodable{
     var results: [FQResults]
 }
