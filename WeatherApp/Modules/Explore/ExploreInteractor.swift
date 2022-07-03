@@ -14,7 +14,7 @@ class ExploreInteractor: PresenterToInteractorExploreProtocol{
     
             let url = URL(string: "https://\(String(format: fqEndpoint, String(latitude),String(longitude)))")!
             var request = URLRequest(url: url)
-            HttpRequestService.get(url: url, type: ForecastResponse.self, headers:["Content-type":"application/json", "Authorization": apiKey]) { [self] success, response, error in
+            HttpRequestService.get(url: url, type: FoursquareResponse.self, headers:["Content-type":"application/json", "Authorization": apiKey]) { [self] success, response, error in
                 if success, let response = response as? FoursquareResponse{
                     presenter?.success(fourSquareResponse: response)
                 } else {
